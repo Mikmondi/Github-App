@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
-import { GithubService } from '../github-service/github.service';
+import { GithubRequestService } from '../github-http/github-request.service';
 
 @Component({
   selector: 'app-user',
@@ -8,8 +8,8 @@ import { GithubService } from '../github-service/github.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user!: User;
-   constructor(private userService:GithubService ) { }
+  user: User;
+   constructor(private userService:GithubRequestService ) { }
    usersearch(textsearch: string){
      this.userService.userRequest(textsearch).then(
        ()=>{
