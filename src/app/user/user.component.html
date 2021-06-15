@@ -1,1 +1,20 @@
-<p>user works!</p>
+<div class="container">
+    <app-form (emittextsearch)="usersearch($event)"></app-form>
+    <div class="row">
+    <div class="col-md-4"> 
+        <img src="{{user.avatar_url}}" alt="">
+        <p class="bren">Name: {{user.name}}</p>
+    </div>
+    <div class="col-md-8">
+        <div class="card m-2">
+            <div class="card-title mb-2">
+                <p>Username: {{user.login}}</p>
+                <p>Followers: {{user.followers}}</p>
+                <p>Followering:{{user.following}}</p>
+                <p>Repository:{{user.public_repos}}</p>
+                <p>Years:{{user.created_at | created}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
