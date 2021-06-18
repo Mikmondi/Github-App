@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 body{
-background-image: url(https://unsplash.com/photos/azMs02-lAFk);
+    background-image: url(https://images.unsplash.com/photo-1623920996377-9c5cd536143e?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3N3x8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-size: 100% ; 
+    background-position: cover;
+
+}
+p{
+    color: rgba(244, 244, 248, 0.952);
+    font-size: 18;
 }

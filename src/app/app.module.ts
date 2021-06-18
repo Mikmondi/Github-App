@@ -10,7 +10,7 @@ import { UserComponent } from './user/user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RepoComponent } from './repo/repo.component';
 import { DateCountPipe } from './date-count.pipe';
-import { GithubRequestService } from './github-http/github-request.service';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { GithubRequestService } from './github-http/github-request.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [GithubRequestService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
