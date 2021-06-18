@@ -10,9 +10,9 @@
             <div class="card-title mb-2">
                 <p>Username: {{user.login}}</p>
                 <p>Followers: {{user.followers}}</p>
-                <p>Followering:{{user.following}}</p>
+                <p>Following:{{user.following}}</p>
                 <p>Repository:{{user.public_repos}}</p>
-                <p>Years:{{user.created_at | created}}</p>
+                <p>Years:{{user.created_at | dateCount}}</p>
             </div>
         </div>
     </div>

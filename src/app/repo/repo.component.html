@@ -1,1 +1,18 @@
-<p>repo works!</p>
+<div class="container">
+    <h1 style="text-align: center;color:rgba(238, 57, 87, 0.918);">VIEW YOU REPOSITORY</h1>
+    <app-github-form (emittextsearch)="reposearch($event)"></app-github-form>
+  <p style="color:rgba(238, 57, 87, 0.918); font-size: 20px;"><i>ENTER THE GITHUB USERNAME IN THE SEARCH BOX TO VIEW THE USER REPOSITORY</i></p>
+    <div class="whole">
+        <div class="myrepo">
+            <div class="card" *ngFor="let repo of repository" class="card m-2" style="width: 22rem;" class="hello">
+                <div class="card-body">
+                    <h5 class="card-title">Repo Name:{{repo.name}} </h5>
+                    <hr>
+                    <div class="card-text">
+                        <p>Description :{{repo.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

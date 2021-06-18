@@ -9,6 +9,7 @@ import { GithubRequestService } from '../github-http/github-request.service';
 })
 export class RepoComponent implements OnInit {
   repository!: Repository[];
+
   constructor( private repositoryService:GithubRequestService) { }
   reposearch(textsearch: string){
     this. repositoryService.repoRequest(textsearch).then(

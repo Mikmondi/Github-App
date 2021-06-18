@@ -8,7 +8,8 @@ import { GithubRequestService } from '../github-http/github-request.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user: User;
+
+  user!: User;
    constructor(private userService:GithubRequestService ) { }
    usersearch(textsearch: string){
      this.userService.userRequest(textsearch).then(
