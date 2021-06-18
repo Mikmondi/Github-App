@@ -8,7 +8,7 @@ import { GithubRequestService } from '../github-http/github-request.service';
   styleUrls: ['./repo.component.css']
 })
 export class RepoComponent implements OnInit {
-  repository!: Repository[];
+  repository!: Repository[]
 
   constructor( private repositoryService:GithubRequestService) { }
   reposearch(textsearch: string){
