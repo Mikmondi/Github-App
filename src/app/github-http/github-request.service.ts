@@ -11,7 +11,7 @@ export class GithubRequestService {
   user:User;
   repository: Repository[]
   gitUrl = 'https://api.github.com/users/';
-  apiKey='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'
+  
 
    constructor(private http: HttpClient) {
      this.user = new User("", "", "", 0, 0, 0, new Date)
@@ -28,7 +28,7 @@ export class GithubRequestService {
        created_at:Date
      }
      let promise = new Promise((resolve,reject)=>{
-         this.http.get<ApiResponse>(this.gitUrl+textsearch+'?access_token='+this.apiKey).toPromise().then(response=>{
+         this.http.get<ApiResponse>(this.gitUrl+textsearch+'?access_token='+environment.apiKey).toPromise().then(response=>{
          this.user.avatar_url = response.avatar_url
          this.user.name =response.name
          this.user.login=response.login
@@ -56,7 +56,7 @@ export class GithubRequestService {
        description:string;
    }
    let promise = new Promise((resolve,reject)=>{
-     this.http.get<ApiResponse[]>(this.gitUrl+textsearch+'/repos?access_token='+this.apiKey).toPromise().then(response=>{
+     this.http.get<ApiResponse[]>(this.gitUrl+textsearch+'/repos?access_token='+environment.apiKey).toPromise().then(response=>{
        console.log(response[0].id)
       for(let item of response){
         let a=new Repository(item.id,item.name,item.html_url,item.description)
