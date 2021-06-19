@@ -11,7 +11,7 @@ export class GithubRequestService {
   user:User;
   repository: Repository[]
   gitUrl = 'https://api.github.com/users/'
-  apiKey = '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'
+  apiKey = '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'
   
 
    constructor(private http: HttpClient) {
