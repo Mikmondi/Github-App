@@ -1,20 +1,23 @@
 <div class="container">
     <app-github-form (emittextsearch)="usersearch($event)"></app-github-form>
+    <div class="rorder">
     <div class="row">
+        
     <div class="col-md-4"> 
         <img src="{{user.avatar_url}}" alt="">
-        <p class="bren">Name: {{user.name}}</p>
+        <p appHighlight class="bren">Name: {{user.name}}</p>
     </div>
     <div class="col-md-8">
         <div class="card m-2">
             <div class="card-title mb-2">
-                <p>Username: {{user.login}}</p>
-                <p>Followers: {{user.followers}}</p>
-                <p>Following:{{user.following}}</p>
-                <p>Repository:{{user.public_repos}}</p>
-                <p>Years:{{user.created_at | dateCount}}</p>
+                <p appHighlight>Username: {{user.login}}</p>
+                <p appHighlight>Followers: {{user.followers}}</p>
+                <p appHighlight>Following:{{user.following}}</p>
+                <p appHighlight>Repository:{{user.public_repos}}</p>
+                <p appHighlight>Years:{{user.created_at | dateCount}}</p>
             </div>
         </div>
     </div>
+        </div>
 </div>
 </div>

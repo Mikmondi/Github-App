@@ -9,4 +9,9 @@
   p{
     font-weight: bold;
   }
+  .rorder{
+    display: flexbox;
+    justify-content: space-between;
+    align-items: stretch;
+  }
   

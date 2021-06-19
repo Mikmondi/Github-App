@@ -1,15 +1,15 @@
 <div class="container">
     <h1 style="text-align: center;color:rgba(244, 246, 248, 0.904);">YOUR REPOSITORIES</h1>
     <app-github-form (emittextsearch)="reposearch($event)"></app-github-form>
-  <p class='viewhead' style="color:rgba(244, 246, 248, 0.904); font-size: 20px;"><i>ENTER THE GITHUB USERNAME IN THE SEARCH BOX TO VIEW THE USER REPOSITORY</i></p>
+  <p appHighlight class='viewhead' style="color:rgba(244, 246, 248, 0.904); font-size: 20px;"><i>ENTER THE GITHUB USERNAME IN THE SEARCH BOX TO VIEW THE USER REPOSITORY</i></p>
     <div class="whole">
         <div class="thisRepo">
             <div class="card" *ngFor="let repo of repository" class="card m-2" style="width: 22rem;" class="hello">
                 <div class="card-body">
-                    <h5 class="card-title">Repo Name:{{repo.name}} </h5>
+                    <h5 appHighlight class="card-title">Repo Name:{{repo.name}} </h5>
                     <hr>
                     <div class="card-text">
-                        <p>Description :{{repo.description}}</p>
+                        <p appHighlight>Description :{{repo.description}}</p>
                     </div>
                 </div>
             </div>
