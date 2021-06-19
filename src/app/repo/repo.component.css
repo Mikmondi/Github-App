@@ -4,7 +4,7 @@
     background-color: rgba(240, 237, 245, 0.377);
   }
   .hello{
-  background-color:rgba(247, 241, 232, 0.678);
+  background-color:rgba(87, 93, 100, 0.678);
   color: black;
   margin-bottom: 2%;
   
@@ -13,4 +13,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  .viewhead{
+      margin-left: 30px;
   }
